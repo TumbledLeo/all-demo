@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML5网速测试进度条代码 - 站长素材</title>
+
+<!--[if IE]>
+	<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+<div class="zzsc-container">
+	<div data-to-value='0'class="barPie">
+	  <span class="barPie__value">0</span>
+	  <div class="barPie__ring">	
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem0" value="1" hidden="hidden">
+      <label for="p1_barPieItem0" class="barPie__ring__item "></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem1" value="2" hidden="hidden">
+      <label for="p1_barPieItem1" class="barPie__ring__item "></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem2" value="3" hidden="hidden">
+      <label for="p1_barPieItem2" class="barPie__ring__item"></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem3" value="4" hidden="hidden">
+      <label for="p1_barPieItem3" class="barPie__ring__item"></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem4" value="5" hidden="hidden">
+      <label for="p1_barPieItem4" class="barPie__ring__item"></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem5" value="6" hidden="hidden">
+      <label for="p1_barPieItem5" class="barPie__ring__item"></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem6" value="7" hidden="hidden">
+      <label for="p1_barPieItem6" class="barPie__ring__item"></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem7" value="8" hidden="hidden">
+      <label for="p1_barPieItem7" class="barPie__ring__item"></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem8" value="9" hidden="hidden">
+      <label for="p1_barPieItem8" class="barPie__ring__item"></label>
+      <input type="radio" name="barPieRadioGroup" id="p1_barPieItem9" value="10" hidden="hidden">
+      <label for="p1_barPieItem9" class="barPie__ring__item"></label>
+	  </div>
+	</div>
+</div>
+<button value="">点亮</button>
+
+
+
+<style>
+
+.barPie{
+  width:400px;
+  height:400px;
+  margin:0 auto;
+  background:rgba(43, 43, 44, 0.9);
+  position:relative;
+}
+.barPie__value{
+  position:absolute;
+  top:50%;
+  left:50%;
+}
+.barPie__ring{
+width:100%;
+height:100%;
+}
+.barPie__ring__item{
+  width:20px;
+  height:200px;
+  background: rgba(117, 116, 116, 0.15);
+  display:block;
+  position:absolute;
+  left:50%;
+  margin-left:-10px;
+  transform-origin:20% 100%;
+}
+.barPie__ring__item::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 30%;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 4px rgba(0, 0, 0, 0.33) inset;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.barPie__ring__item:nth-of-type(1){
+  transform: rotate(0deg);
+}
+.barPie__ring__item:nth-of-type(2){
+  transform: rotate(36deg); 
+}
+.barPie__ring__item:nth-of-type(3){
+  transform: rotate(72deg); 
+}
+.barPie__ring__item:nth-of-type(4){
+  transform: rotate(108deg); 
+}
+.barPie__ring__item:nth-of-type(5){
+  transform: rotate(144deg); 
+}
+.barPie__ring__item:nth-of-type(6){
+  transform: rotate(180deg);
+}
+.barPie__ring__item:nth-of-type(7){
+  transform: rotate(216deg); 
+}
+.barPie__ring__item:nth-of-type(8){
+  transform: rotate(252deg); 
+}
+.barPie__ring__item:nth-of-type(9){
+  transform: rotate(288deg); 
+}
+.barPie__ring__item:nth-of-type(10){
+  transform: rotate(324deg); 
+}
+.barPie__ring__item.sun::after{
+		background: rgba(255, 255, 255);}
+button{
+  position:absolute;
+  right:10%;
+  top:10%;
+  width:100px;
+  height:20px;
+}
+</style>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+<script>
+$(function(){
+	var tep = 0;
+//	setTimeout("sun()",5000);
+	function sun(tep){
+		console.log(1);
+		for(var i=0;i<tep;i++){
+			console.log(2);
+			$('.barPie__ring__item').eq(i).delay("slow").addClass('sun');
+		}
+	}
+//	sun(tep);
+$('button').click(function(){
+  tep++;
+  sun(tep);
+});
+});</script>
+</body>
+</html>
