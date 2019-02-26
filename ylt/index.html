@@ -1,0 +1,645 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+
+
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Anton);
+
+body { margin: 0; background: linear-gradient(to right, #cbcbcb, white); }
+/* ---------- WATCH ---------- */
+#watch { position: absolute; left: 50%; width: 641px; height: 641px; margin-left:-320.5px;left:50%;    top: 128px;    border-radius: 322px;
+    box-shadow: 1px 1px 59px #91aabf;}
+/* ---------- CASE ---------- */
+#watch .case { width: 100%; height: 100%; border-radius: 50%;
+ /* background: #111 conic-gradient(#666, #111, #666, #111, #666, #111, #666, #111, #666); */
+ background:url(./img/biao.png) no-repeat center ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+/* ---------- DIAL ---------- */
+/* #watch .dial { position: absolute; top: 20px; right: 20px; bottom: 20px; left: 20px; border-radius: 50%; background: #d6d8da conic-gradient(white, #d6d8da, white, #d6d8da, white, #d6d8da, white, #d6d8da, white); box-shadow: 0 0 0 5px #070707, 0 0 5px 5px rgba(255, 255, 255, 0.5); } */
+/* #watch .dial:before { content: ''; position: absolute; top: 5.9997px; right: 5.9997px; bottom: 5.9997px; left: 5.9997px; border-radius: 50%; background: #202020; } */
+/* ---------- DASHES ---------- */
+#watch .dashes i { position: absolute; top: 18.0018px; bottom: 18.0018px; left: 50%; width: 4px; margin-left: -2px; }
+#watch .dashes i:before, #watch .dashes i:after { content: ''; position: absolute; right: 0; left: 0; height: 18.0018px; background: linear-gradient(#c9e7b0, #e8f7d3); border-radius: 1px; }
+#watch .dashes i:before { top: 0; }
+#watch .dashes i:after { bottom: 0; transform: rotate(180deg); }
+#watch .dashes i:nth-child(1) { transform: rotate(0deg); }
+#watch .dashes i:nth-child(2) { transform: rotate(6deg); }
+#watch .dashes i:nth-child(3) { transform: rotate(12deg); }
+#watch .dashes i:nth-child(4) { transform: rotate(18deg); }
+#watch .dashes i:nth-child(5) { transform: rotate(24deg); }
+#watch .dashes i:nth-child(6) { transform: rotate(30deg); }
+#watch .dashes i:nth-child(7) { transform: rotate(36deg); }
+#watch .dashes i:nth-child(8) { transform: rotate(42deg); }
+#watch .dashes i:nth-child(9) { transform: rotate(48deg); }
+#watch .dashes i:nth-child(10) { transform: rotate(54deg); }
+#watch .dashes i:nth-child(11) { transform: rotate(60deg); }
+#watch .dashes i:nth-child(12) { transform: rotate(66deg); }
+#watch .dashes i:nth-child(13) { transform: rotate(72deg); }
+#watch .dashes i:nth-child(14) { transform: rotate(78deg); }
+#watch .dashes i:nth-child(15) { transform: rotate(84deg); }
+#watch .dashes i:nth-child(16) { transform: rotate(90deg); }
+#watch .dashes i:nth-child(17) { transform: rotate(96deg); }
+#watch .dashes i:nth-child(18) { transform: rotate(102deg); }
+#watch .dashes i:nth-child(19) { transform: rotate(108deg); }
+#watch .dashes i:nth-child(20) { transform: rotate(114deg); }
+#watch .dashes i:nth-child(21) { transform: rotate(120deg); }
+#watch .dashes i:nth-child(22) { transform: rotate(126deg); }
+#watch .dashes i:nth-child(23) { transform: rotate(132deg); }
+#watch .dashes i:nth-child(24) { transform: rotate(138deg); }
+#watch .dashes i:nth-child(25) { transform: rotate(144deg); }
+#watch .dashes i:nth-child(26) { transform: rotate(150deg); }
+#watch .dashes i:nth-child(27) { transform: rotate(156deg); }
+#watch .dashes i:nth-child(28) { transform: rotate(162deg); }
+#watch .dashes i:nth-child(29) { transform: rotate(168deg); }
+#watch .dashes i:nth-child(30) { transform: rotate(174deg); }
+#watch .dashes i:nth-child(31) { transform: rotate(180deg); }
+/* 特殊取整 */
+ #watch .dashes.big i { width: 0px; margin-left: -4px; } 
+#watch .dashes.big i:before, #watch .dashes.big i:after { height: 36.0036px; }
+#watch .dashes.big i:nth-child(1) { transform: rotate(0deg); }
+#watch .dashes.big i:nth-child(2) { transform: rotate(30deg); }
+#watch .dashes.big i:nth-child(3) { transform: rotate(60deg); }
+#watch .dashes.big i:nth-child(4) { transform: rotate(90deg); }
+#watch .dashes.big i:nth-child(5) { transform: rotate(120deg); }
+#watch .dashes.big i:nth-child(6) { transform: rotate(150deg); }
+/* ---------- NUMBERS ---------- */
+#watch .numbers { line-height: 23.9952px; font-family: 'Anton', sans-serif; font-size: 32px; color: #e8f7d3; text-align: center; }
+#watch .numbers div { position: absolute; top: 59.97001px; right: 0; bottom: 59.97001px; left: 0; }
+#watch .numbers div span { display: block; margin-top: 4px; }
+#watch .numbers div.nospace span { margin-top: 0; }
+#watch .inner-dial .numbers { line-height: 14.0007px; font-size: 20px; }
+#watch .inner-dial .numbers div { top: 0; bottom: 0; }
+#watch .numbers div:nth-child(1) { transform: rotate(30deg); }
+#watch .numbers div:nth-child(1) span { transform: rotate(-30deg); }
+#watch .numbers div:nth-child(2) { transform: rotate(60deg); }
+#watch .numbers div:nth-child(2) span { transform: rotate(-60deg); }
+#watch .numbers div:nth-child(3) { transform: rotate(90deg); }
+#watch .numbers div:nth-child(3) span { transform: rotate(-90deg); }
+#watch .numbers div:nth-child(4) { transform: rotate(120deg); }
+#watch .numbers div:nth-child(4) span { transform: rotate(-120deg); }
+#watch .numbers div:nth-child(5) { transform: rotate(150deg); }
+#watch .numbers div:nth-child(5) span { transform: rotate(-150deg); }
+#watch .numbers div:nth-child(6) { transform: rotate(180deg); }
+#watch .numbers div:nth-child(6) span { transform: rotate(-180deg); }
+#watch .numbers div:nth-child(7) { transform: rotate(210deg); }
+#watch .numbers div:nth-child(7) span { transform: rotate(-210deg); }
+#watch .numbers div:nth-child(8) { transform: rotate(240deg); }
+#watch .numbers div:nth-child(8) span { transform: rotate(-240deg); }
+#watch .numbers div:nth-child(9) { transform: rotate(270deg); }
+#watch .numbers div:nth-child(9) span { transform: rotate(-270deg); }
+#watch .numbers div:nth-child(10) { transform: rotate(300deg); }
+#watch .numbers div:nth-child(10) span { transform: rotate(-300deg); }
+#watch .numbers div:nth-child(11) { transform: rotate(330deg); }
+#watch .numbers div:nth-child(11) span { transform: rotate(-330deg); }
+/* ---------- ARROW ---------- */
+#watch .arrow { position: absolute; top: 58.05515px; left: 50%; margin-left: -14.99813px; width: 0; height: 0; border-style: solid; border-width: 0 14.99813px 26.0078px 14.99813px; border-color: transparent transparent #e8f7d3 transparent; }
+#watch .arrow:before { content: ''; position: absolute; top: 26.0078px; left: -3.00008px; width: 5.9997px; height: 16px; background: #e8f7d3; border-radius: 0 0 1px 1px; }
+/* ---------- MADE IN ---------- */
+#watch .made-in { position: absolute; right: 0; bottom: 53.33333px; left: 0; color: #eee; font-size: 5.71429px; font-family: 'Roboto', sans-serif; }
+#watch .made-in span { float: left; width: 50%; box-sizing: border-box; }
+#watch .made-in span:first-child { padding-right: 10px; text-align: right; transform: rotate(9deg); }
+#watch .made-in span:last-child { padding-left: 10px; transform: rotate(-9deg); }
+/* ---------- SHADOW ---------- */
+#watch .shadow {     position: absolute;
+    /* top: 5.9997px; */
+    /* right: 5.9997px; */
+    /* bottom: 5.9997px; */
+    /* left: 5.9997px; */
+    border-radius: 50%;
+    /* box-shadow: 0 28.57143px 10px rgba(0, 0, 0, 0.5) inset; */
+    background: #3265b8;
+    width: 370px;
+    height: 370px;
+    left: 50%;
+    top: 50%;
+    margin-left: -185px;
+    margin-top: -185px;
+    }
+/* ---------- INNER DIAL ---------- */
+#watch .inner-dial { position: absolute; top: 108.10811px; right: 108.10811px; bottom: 108.10811px; left: 108.10811px; border-radius: 50%; border: 3.00008px solid #eee; text-align: center; }
+/* ---------- LOGO ---------- */
+#watch .logo { height: 26.0078px; margin-top: 23.9952px; }
+/* ---------- HANDS ---------- */
+#watch .hands .h, #watch .hands .m, #watch .hands .s, #watch .hands .s:before { position: absolute; top: 50%; left: 50%; border-radius: 50%; background: #1c1e1c; box-shadow: 0 0 2px black, 0 0 2px rgba(255, 255, 255, 0.3) inset; }
+#watch .hands .h { width: 26.0078px; height: 26.0078px; margin: -13.0039px 0 0 -13.0039px; }
+#watch .hands .m { width: 20px; height: 20px; margin: -10px 0 0 -10px; }
+/* ---------- HANDS DIAMONDS ---------- */
+#watch .hands .h .diamond { transform: translateY(7.00035px); }
+#watch .hands .m .diamond { transform: scaleX(0.2) translateY(8px); }
+#watch .hands .s .diamond { transform: scaleX(0.2) translateY(8px); }
+#watch .hands .diamond span { position: absolute; background: #e8f7d3; transform: rotate(-45deg) skew(-20deg, -20deg); transform-origin: bottom left; }
+#watch .hands .h .diamond span { left: 12.99968px; bottom: 10px; width: 25px; height: 25px; box-shadow: 0 0 0 4px #1c1e1c, 0 0 4px 4px rgba(0, 0, 0, 0.3); }
+#watch .hands .m .diamond span, #watch .hands .s .diamond span { left: 9.0009px; bottom: 9.0009px; width: 68.02721px; height: 68.02721px; border-radius: 1px; box-shadow: 0 0 0 12.0012px #1c1e1c, 0 0 4px 12.0012px rgba(0, 0, 0, 0.4); }
+/* ---------- SECONDS ---------- */
+#watch .hands .s { width: 14.0007px; height: 14.0007px; margin: -7.00035px 0 0 -7.00035px; background: #3b3c38; box-shadow: none;transform: rotate(200deg); }
+#watch .hands .s:before { content: ''; width: 4px; height: 4px; margin: -4px 0 0 -4px; background: #181818; border: 2px solid #3b3c38; box-shadow: 0 0 2px rgba(0, 0, 0, 0.75); }
+#watch .hands .s div, #watch .hands .s div:before, #watch .hands .s div:after { position: absolute; left: 50%; width: 22px; margin-left: -2px; border-radius: 1px; background: url(img/nav.png)no-repeat; }
+#watch .hands .s div { bottom: 100%; height: 228px; background: url(img/nav.png)no-repeat;  }
+#watch .hands .s div:before { content: ''; top: 100%; height: 55.02063px; margin-top: 14.0007px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
+#watch .hands .s div:after { content: ''; top: 100%; width: 12.0012px; height: 20px; margin-left: -5.9997px; margin-top: 36.0036px; border-radius: 2px; box-shadow: 0 0 4px rgba(0, 0, 0, 0.4); }
+body{
+    background:#f8fafc;
+    max-width:1920px;
+    min-width:1200px;
+    margin:0 auto;
+} 
+a{
+    text-decoration: none
+}
+.more .show{
+    width:280px;height:50px;text-align: center;line-height:50px;font-size: 18px;display:block;margin:0 auto;color:#fff;background:#317ecb;border-radius: 6px;margin-bottom:30px;
+}
+.list .show{
+    width:280px;height:50px;text-align: center;line-height:50px;font-size: 18px;display:block;color:#fff;background:#317ecb;border-radius: 6px;
+    position:absolute;
+    bottom:64px;
+    left:50%;
+    margin-left:-140px;
+}
+.show:hover{
+background:linear-gradient(to right, #ff5f6d 0%,#ffac70 100%);
+}
+li{
+    list-style: none;
+}
+.list li{
+    box-shadow: 2px 2px 20px #e3e6e9;
+    width:360px;
+    height:556px;
+    position:relative;
+}
+.wraping{
+    position:absolute;right:32px;top:40px;
+}
+.wraping p{
+    font-size: 60px;
+    font-weight: 554;
+    /* font-style:oblique; */
+    width:100px;
+    position:absolute;
+    top:-24px;right:12px;
+    
+}
+.wraping .p1{
+    background: linear-gradient(to right, #2ad0e9, #2ae2b5);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 60px;
+}
+.wraping .p2{
+    background: linear-gradient(to right, #ffb651, #ffda57);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 60px;
+}
+.wraping .p3{
+    background: linear-gradient(to right, #f85769, #ffa970);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 60px;
+}
+.circleChart{
+    position:absolute;
+    top:-154px;
+}
+</style>
+<style>
+
+    .f-ongoing{color:#f60}
+    .f-complete{color:#090}
+    .circle_step_box{width:1200px;margin:0 auto;}
+    .circle_step{width:155px;height:auto;float:left;margin-left:54px;cursor:pointer;}
+    .circle_step>div{width:155px;height:155px;position:relative;}
+    .circle_step>div>strong{font-size:26px;color:#4697f2;position:absolute;top:39px;text-align:center;display:block;width:100%;left:0;}
+    .circle_step>div>strong>i{font-size:18px;}
+    .circle_step.active>div>strong{color:#feab11;}
+    .circle_step>p{font-size:16px;width:130px;text-align:center;margin:0 auto;margin-top:20px;color:#4697f2;}
+    .circle_step.active>p{color:#feab11;}
+    .tabscontent.mainDiv{background:#4696ef;width:100%;margin-top:55px;}
+    .oimg_nav_box{width:1200px;margin:0 auto;}
+    #oimg_nav{display:block;width:77px;margin-left:40px;}
+    </style>
+</head>
+<body>
+
+<script src="js/prefixfree.min.js"></script>
+<div class="banner" style="position: relative;top:0;width:100%;height:682px;margin:0 auto;background:url(img/bg.jpg)no-repeat center;">
+<div id="watch">
+    <div class="case">
+        <div class="dial">
+                
+            <!-- <div class="dashes">
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+            </div> -->
+            <!-- <div class="dashes big">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+            </div> -->
+            
+            <!-- <div class="numbers">
+                <div class="nospace"><span>5</span></div>
+                <div><span>10</span></div>
+                <div><span>15</span></div>
+                <div><span>20</span></div>
+                <div><span>25</span></div>
+                <div class="nospace"><span>30</span></div>
+                <div><span>35</span></div>
+                <div><span>40</span></div>
+                <div><span>45</span></div>
+                <div><span>50</span></div>
+                <div><span>55</span></div>
+            </div> -->
+            
+            <!-- <div class="arrow"></div> -->
+            
+            <!-- <div class="made-in">
+                <span>MADE IN</span>
+                <span>GERMANY</span>
+            </div> -->
+            
+            <!-- <div class="inner-dial">
+                <img class="logo" src="img/Loader.png">
+                <div class="numbers">
+                    <div><span>1</span></div>
+                    <div><span>2</span></div>
+                    <div><span>3</span></div>
+                    <div><span>4</span></div>
+                    <div><span>5</span></div>
+                    <div><span>6</span></div>
+                    <div><span>7</span></div>
+                    <div><span>8</span></div>
+                    <div><span>9</span></div>
+                    <div><span>10</span></div>
+                    <div><span>11</span></div>
+                    <div><span>12</span></div>
+                </div>
+            </div> -->
+            
+            <div class="hands">
+                <!-- <div class="h">
+                    <div class="diamond"><span></span></div>
+                </div>
+                <div class="m">
+                    <div class="diamond"><span></span></div>
+                </div> -->
+                <div class="s" style="transition: all 2s">
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="shadow">
+                <p id ="p1" style="    position: absolute; top: 50%;text-align: center; width: 100%; margin-top: -80px;color:#fff;font-size: 120px;text-shadow:0px 0px 30px #fff;font-weight: 100"></p>
+            </div>
+                
+        </div>
+    </div>
+</div>
+</div>
+<div class="main s" style="position:relative;">
+    <div class="top" style="width:100%;height:212px;background:url(img/text.jpg)no-repeat center;"></div>
+    <div class="more"><a href="" class="show" style="">付费解决</a></div>
+    <ul class="list" style="width:1200px;display: flex; display: -webkit-flex;justify-content: space-between;margin:90px auto 60px">
+        <li><img src="img/t1.jpg" alt="">
+            <div class="wraping" style="">
+                <!-- <img src="img/quan.png" alt="">
+                <p class="p1" id="11">35</p>
+                <div class="circleChart" id="2" data-value="35" ></div> -->
+                <div class="circle_step" state="1" press_name="circle_step1" style="margin-left:0;">
+                    <div id="circle_step1"><canvas width="155" height="155"></canvas><strong class="p1"></strong></div>
+                </div>
+            </div>
+            <a href="" class="show">深度检测</a>
+        </li>
+        <li><img src="img/t2.jpg" alt="">
+            <div class="wraping" style="">
+                <!-- <img src="img/quan.png" alt="">
+                <p class="p2" id="22">42</p>
+                <div class="circleChart" id="3" data-value="42" ></div> -->
+                <div class="circle_step" state="-1" press_name="circle_step2">
+                    <div id="circle_step2"><canvas width="155" height="155"></canvas><strong class="p2">75</strong></div>
+                </div>
+            </div>
+            <a href="" class="show">深度检测</a></li>
+        <li><img src="img/t3.jpg" alt="">
+            <div class="wraping" style="">
+                <!-- <img src="img/quan.png" alt="">
+                <p class="p3" id="33">94</p>
+                <div class="circleChart" id="4" data-value="94" ></div> -->
+                <div class="circle_step" state="-1" press_name="circle_step3">
+                    <div id="circle_step3"><canvas width="155" height="155"></canvas><strong class="p3"></strong></div>
+            
+                </div>
+            </div>
+            <a href="" class="show">深度检测</a></li>
+        </li>
+    </ul>
+    <ul class="list" style="width:1200px;display: flex; display: -webkit-flex;justify-content: space-between;margin:0 auto 60px;">
+        <li><img src="img/t4.jpg" alt="">
+            <div class="wraping" style="">
+                <!-- <img src="img/quan.png" alt="">
+                <p class="p2" id="44">58</p>
+                <div class="circleChart" id="5" data-value="58" ></div> -->
+                <div class="circle_step" state="-1" press_name="circle_step4">
+                    <div id="circle_step4"><canvas width="155" height="155"></canvas><strong class="p2"></strong></div>
+            
+                </div>
+            </div>
+            <a href="" class="show">深度检测</a>
+        </li>
+        <li><img src="img/t5.jpg" alt="">
+            <div class="wraping" style="">
+                <!-- <img src="img/quan.png" alt="">
+                <p class="p1" id="55">24</p>
+                <div class="circleChart" id="6" data-value="24" ></div> -->
+                <div class="circle_step" state="-1" press_name="circle_step5">
+                    <div id="circle_step5"><canvas width="155" height="155"></canvas><strong class="p1"></strong></div>
+            
+                </div>
+            </div>
+            <a href="" class="show">深度检测</a></li>
+        <li><img src="img/t6.jpg" alt="">
+            <div class="wraping" style="">
+                <!-- <img src="img/quan.png" alt="">
+                <p class="p1" id="66">12</p>
+                <div class="circleChart" id="7" data-value="12" ></div> -->
+                <div class="circle_step" state="-1" press_name="circle_step6">
+                    <div id="circle_step6"><canvas width="155" height="155"></canvas><strong class="p1"></strong></div>
+            
+                </div>
+            </div>
+            <a href="" class="show">深度检测</a></li>
+        </li>
+    </ul>
+</div>
+<!-- 数字插件 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script src="js/countup.js"></script>
+<script>
+
+$(function(){
+    
+function time() {
+    var d = new Date();
+    // var h = (d.getHours() + d.getMinutes()/60) / 12 * 360;
+    // var m = (d.getMinutes() + d.getSeconds()/60) / 60 * 360;
+    var s = (d.getSeconds() + d.getMilliseconds()/1000) /60 * 360;
+    var s = (57000/1000) /60 * 360;
+    // $('#watch .hands .h').css('transform', 'rotate('+h+'deg)');
+    // $('#watch .hands .m').css('transform', 'rotate('+m+'deg)');
+   // $('#watch .hands .s').css('transform', 'rotate('+s+'deg)');
+ 
+    $('#watch .hands .s').animate({},function(){                                       //第一个花括号里面是动画内容，可以为空，但不能省去中括号
+       $('#watch .hands .s').css('transform', 'rotate('+s+'deg)');                               //在回调函数里面改变css属性来实现transform中的动画变换 
+    });
+// $('.shadow p').html();
+}
+
+time();
+var options = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.'
+};
+var  demo = new CountUp('p1',  0, 35, 0, 0, options);
+demo.start();
+// if (!demo.error) {
+//   demo.start();
+// } else {
+//   console.error(demo.error);
+// }
+
+});
+</script>
+
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="dist/circleChart.min.js"></script>
+<script>
+    var options = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.'
+};
+    var  demo1 = new CountUp('11',  0, 35, 0, 0, options);
+var  demo2 = new CountUp('22',  0, 42, 0, 0, options);
+var  demo3 = new CountUp('33',  0, 94, 0, 0, options);
+var  demo4 = new CountUp('44',  0, 58, 0, 0, options);
+var  demo5 = new CountUp('55',  0, 24, 0, 0, options);
+var  demo6 = new CountUp('66',  0, 12, 0, 0, options);
+$(window).scroll(function(){
+// 滚动条距离顶部的距离 大于 200px时
+
+if($(window).scrollTop() >= 400){
+    $(".circleChart#2").circleChart({
+        size:150,
+        startAngle: 50,
+        animate: true,
+        color: '#2ad1e8',
+        widthRatio: 0.3,
+        textCenter: false,
+        speed:1000,
+		// onDraw: function(el, circle) {
+        //     circle.text(Math.round(circle.value));
+        // }
+    });
+    $(".circleChart#3").circleChart({
+        size:150,
+        startAngle: 50,
+        animate: true,
+        color: '#ffa751',
+        widthRatio: 0.3,
+        textCenter: false,
+        speed:1000,
+    });
+    $(".circleChart#4").circleChart({
+        size:150,
+        startAngle: 0,
+        animate: true,
+        color: '#ee5764',
+        widthRatio: 0.3,
+        textCenter: false,
+        speed:1000,
+    });
+    $(".circleChart#5").circleChart({
+        size:150,
+        startAngle:120,
+        animate: true,
+        color: '#ffa751',
+        widthRatio: 0.3,
+        textCenter: false,
+        speed:1000,
+    });
+    $(".circleChart#6").circleChart({
+        size:150,
+        startAngle: 50,
+        animate: true,
+        color: '#39c1ef',
+        widthRatio: 0.3,
+        textCenter: false,
+        speed:1000,
+    });
+    $(".circleChart#7").circleChart({
+        size:150,
+        startAngle: 70,
+        animate: true,
+        color: '#39c1ef',
+        widthRatio: 0.3,
+        textCenter: false,
+        speed:1000,
+    });
+    
+
+
+
+demo1.start();
+
+demo2.start();
+
+demo3.start();
+
+demo4.start();
+
+demo5.start();
+
+demo6.start();
+} else{
+}
+});
+    
+    // setInterval(function() {
+    //     $("#0").circleChart({
+    //         value: Math.random() * 100
+    //     });
+    // }, 4000);
+
+</script>
+<script src="./js/circle-progress.js"></script>
+
+<script>
+    //初始化环形进度条
+    
+    function create_circle(num,val_num){
+        if(num==1||num==5||num==6){
+            $('#circle_step'+num).circleProgress({
+                value: val_num,//你需要展示的值，值从0.0到1.0，默认值为0
+                size: 155,//环形图的大小，单位像素，默认值100
+                startAngle:-3,//初始角度，默认值为-Math.PI
+                reverse:false,//是否反向绘制圆弧和动画，默认值为false
+                lineCap:'round',//圆弧的线头样式："butt"、"round"和"square"。默认值为"butt"
+                thickness:20,//进度条圆弧的宽度。默认它自动为size的1/14大小，你可以设置你需要的值。默认值为auto
+                emptyFill:'rgba(0, 0, 0, .1)',//空圆弧的颜色。默认值为"rgba(0, 0, 0, .1)"
+                fill: {
+                    //圆弧填充的配置。
+    //				-{ color: "#ff1e41" }
+    //				-{ color: 'rgba(255, 255, 255, .3)' }
+    //				-{ gradient: ["red", "green", "blue"] }
+    //				-{ gradient: [["red", .2], ["green", .3], ["blue", .8]] }
+    //				-{ gradient: [ ... ], gradientAngle: Math.PI / 4 }
+    //				-{ gradient: [ ... ], gradientDirection: [x0, y0, x1, y1] }
+    //				-{ image: "http://i.imgur.com/pT0i89v.png" }
+    //				-{ image: imageInstance }
+    //				-{ color: "lime", image: "http://i.imgur.com/pT0i89v.png" }
+    //				默认值为{ gradient: ["#3aeabb", "#fdd250"] }
+                    gradient: ["#39c1ef","#2ae6a8"]
+                }
+            }).on('circle-animation-progress', function(event, progress,stepValue) {//当图像正在绘制时的监听事件
+                $(this).find('strong').html(String((stepValue*100).toFixed(0)));
+            });
+        }else if(num==2||num==4){
+            $('#circle_step'+num).circleProgress({
+                value: val_num,
+                size: 155,
+                startAngle:-2.5,
+                reverse:false,
+                lineCap:'round',
+                thickness:20,
+                fill: {
+                    gradient: ["#ffa751","#ffe259"]
+                }
+            }).on('circle-animation-progress', function(event, progress,stepValue) {
+                $(this).find('strong').html(String((stepValue*100).toFixed(0)) + '');
+            });
+        }else if(num==3){
+            $('#circle_step'+num).circleProgress({
+                value: val_num,
+                size: 155,
+                startAngle:0,
+                reverse:false,
+                lineCap:'round',
+                thickness:20,
+                fill: {
+                    gradient: ["#ee5764","#ffc371"]
+                }
+            }).on('circle-animation-progress', function(event, progress,stepValue) {
+                $(this).find('strong').html(String((stepValue*100).toFixed(0)) + '');
+            });
+        }
+    }
+    $(window).scroll(function(){
+// 滚动条距离顶部的距离 大于 200px时
+if($(window).scrollTop() >= 400){
+    if($('.main').hasClass('s')){
+    create_circle(1,0.35);   
+    create_circle(2,0.42);
+    create_circle(3,0.94);
+    create_circle(4,0.58);
+    create_circle(5,0.24);
+    create_circle(6,0.12);
+    $('.main').removeClass('s');
+    }
+}
+});
+   
+    //当鼠标点击环形进度条时
+    //http://www.htmleaf.com/html5/html5-canvas/201505271918.html
+    console.log(-Math.PI / 4 * 3);
+    // $('.circle_step').click(function(){
+    // 	if($(this).attr('state')=='1'){
+    // 		return false;
+    // 	}
+    // 	//将所有的状态归零
+    // 	var old=$('.circle_step[state="1"]').attr('state','-1').attr('class','circle_step').attr('press_name');
+    // 	$('#'+old).circleProgress({animation: false,fill: {  gradient: ["#46ccf2","#4696ef"]}});
+    // 	//新激活的进度条
+    // 	var press_name=$(this).attr('state','1').attr('class','circle_step active').attr('press_name');
+    // 	$('#'+press_name).circleProgress({animation:true,fill: {  gradient: ["#fece00","#ffa101"]}});
+    // 	//底部指针移动
+    // 	//$('#oimg_nav').css('margin-left',40+(press_name.split('circle_step')[1]-1)*209);
+    // 	//内容切换
+    // 	$('.table_show').eq(press_name.split('circle_step')[1]-1).fadeIn().siblings().fadeOut();
+    // 	//标题切换
+    // 	var table_title_arr=['11111','22222','33333','44444','55555','66666'];
+    // 	$('#table_title').html(table_title_arr[press_name.split('circle_step')[1]-1]);
+    // })
+    //当鼠标进入环形进度条时
+    // $('.circle_step').mouseenter(function(){
+    // 	if($(this).attr('state')=='1'){
+    // 		return false;
+    // 	}
+    // 	var press_name=$(this).attr('class','circle_step active').attr('press_name');
+    // 	$('#'+press_name).circleProgress({animation: false,fill: {  gradient: ["#fece00","#ffa101"]}});
+    // })
+    // //当鼠标离开环形进度条时
+    // $('.circle_step').mouseleave(function(){
+    // 	if($(this).attr('state')=='1'){
+    // 		return false;
+    // 	}
+    // 	var press_name=$(this).attr('class','circle_step').attr('press_name');
+    // 	$('#'+press_name).circleProgress({animation: false,fill: {  gradient: ["#46ccf2","#4696ef"]}});
+    // })
+    </script>
+    
+</body>
+</html>
+
