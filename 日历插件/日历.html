@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.17sucai.com/preview/622817/2017-03-03/calendar/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="http://fonts.googleapis.com/css?family=Roboto">
+    <title>日历</title>
+    <link rel="stylesheet" href="./日历_files/calender.css">
+    <style type="text/css">
+        html {
+            font: 500 14px 'roboto';
+            color: #333;
+            background-color: #fafafa;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul, ol, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #demo {
+            width: 380px;
+            margin: 150px auto;
+        }
+        p {
+            margin: 0;
+        }
+        #dt {
+            margin: 30px auto;
+            height: 28px;
+            width: 200px;
+            padding: 0 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+    </style>
+</head>
+<body style="">
+<div id="demo">
+    <div id="ca" class="calendar calendar-d" style="width: 380px; height: 370px;">
+        <div class="calendar-inner" style="width: 380px;"><div class="calendar-views">
+            <div class="view view-date" style="width: 380px;"><div class="calendar-hd">
+                <a href="javascript:;" data-calendar-display-date="" class="calendar-display">2019/<span class="m">5</span></a>
+                <div class="calendar-arrow"><span class="prev" title="上一月" data-calendar-arrow-date="">&lt;</span><span class="next" title="下一月" data-calendar-arrow-date="">&gt;</span></div>
+            </div>
+            <div class="calendar-ct" style="width: 380px; height: 320px;">
+                <ol class="week">
+                    
+                    <!-- <li style="width:54.285714285714285px;height:45.714285714285715px;line-height:45.714285714285715px">一</li>
+                    <li style="width:54.285714285714285px;height:45.714285714285715px;line-height:45.714285714285715px">二</li>
+                    <li style="width:54.285714285714285px;height:45.714285714285715px;line-height:45.714285714285715px">三</li>
+                    <li style="width:54.285714285714285px;height:45.714285714285715px;line-height:45.714285714285715px">四</li>
+                    <li style="width:54.285714285714285px;height:45.714285714285715px;line-height:45.714285714285715px">五</li>
+                    <li style="width:54.285714285714285px;height:45.714285714285715px;line-height:45.714285714285715px">六</li>
+                    <li style="width:54.285714285714285px;height:45.714285714285715px;line-height:45.714285714285715px">日</li> -->
+                </ol>
+                <ul class="date-items" style="margin-left: -100%;">
+                    <li style="width: 380px;">
+                        <ol class="days">
+                           
+                        </ol>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+<script src="./日历_files/jquery.js"></script>
+<script src="./日历_files/calendar.js"></script>
+<script>
+    $('#ca').calendar({
+        width: 380,
+        height: 320,
+        data: [
+            {
+                date: '2017/12/24',
+                value: 'Christmas Eve'
+            },
+            {
+                date: '2017/12/25',
+                value: 'Merry Christmas'
+            },
+            {
+                date: '2017/01/01',
+                value: 'Happy New Year'
+            }
+        ],
+        onSelected: function (view, date, data) {
+            console.log('view:' + view)
+            alert('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+
+    $('#dd').calendar({
+        trigger: '#dt',
+        zIndex: 999,
+        format: 'yyyy-mm-dd',
+        onSelected: function (view, date, data) {
+            console.log('event: onSelected')
+        },
+        onClose: function (view, date, data) {
+            console.log('event: onClose')
+            console.log('view:' + view)
+            console.log('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+</script>
+
+</body></html>

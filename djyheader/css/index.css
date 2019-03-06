@@ -1,0 +1,123 @@
+@charset "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft YaHei', sans-serif;
+  max-width: 1920px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+/* a:hover {
+  text-decoration: underline;
+} */
+img {
+  border: none;
+  vertical-align: middle; }
+
+ol, ul, li {
+  list-style: none; }
+
+html, body, ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.inner {
+  width: 1200px;
+  margin: 0 auto; }
+
+.left {
+  float: left; }
+
+/*清除浮动代码*/
+.cf::after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0; }
+
+.cf {
+  zoom: 1; }
+
+.nav {
+  width: 100%;
+  background: #000;
+  height: 92px;
+  position: relative; }
+  .nav .inner {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative; }
+    .nav .inner .list {
+      height: 46px;
+      position: absolute;
+      top: 46px; }
+      .nav .inner .list .big {
+        float: left;
+        text-align: center;
+        position: relative;
+        z-index: 99; }
+        .nav .inner .list .big .href {
+          padding: 0 24.7px;
+          display: block;
+          color: #fff;
+          line-height: 46px;
+          font-size: 16px; }
+      .nav .inner .list .right .href {
+        padding: 0 31px; }
+      .nav .inner .list .big:hover {
+        background: #333333; }
+      .nav .inner .list .des {
+        width: 100%;
+        background: #e8edf4 url(../images/header_bg.png) no-repeat bottom;
+        background-position: 50% 0%;
+        padding-top: 15px;
+        display: none;
+        position: absolute;
+        top: 42px; }
+        .nav .inner .list .des li {
+          height: 40px;
+          line-height: 40px; }
+          .nav .inner .list .des li a {
+            color: #646464;
+            font-size: 14px; }
+      .nav .inner .list .des li:hover {
+        background: #d1dceb; }
+        .nav .inner .list .des li:hover a {
+          color: #0b4b9d; }
+    .nav .inner .logo {
+      width: 112px;
+      height: 116px;
+      position: absolute;
+      left: 50%;
+      margin-left: -66px;
+      z-index: 9999; }
+  .nav .man {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 46px;
+    background: #1f1f1f; }
+    .nav .man ul {
+      width: 1178px;
+      margin: 10px auto 0;
+      padding-right: 25px; }
+    .nav .man li {
+      width: 36px;
+      float: right; }
